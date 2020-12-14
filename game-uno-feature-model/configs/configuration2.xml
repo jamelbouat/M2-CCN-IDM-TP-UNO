@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="game_uno_model"/>
+	<feature automatic="selected" name="deposer_cartes"/>
+	<feature name="carte_classique"/>
+	<feature name="meme_numero"/>
+	<feature name="meme_couleur"/>
+	<feature manual="selected" name="carte_identique_interception"/>
+	<feature automatic="selected" name="cumul"/>
+	<feature name="cumul_plus_2"/>
+	<feature manual="selected" name="cumul_plus_4"/>
+	<feature name="suites"/>
+	<feature name="suite_royale"/>
+	<feature name="deposer_entre_0_et_4_cartes"/>
+	<feature name="contester_carte_plus_4"/>
+	<feature automatic="selected" name="piocher"/>
+	<feature automatic="selected" name="piocher_une_carte"/>
+	<feature automatic="unselected" name="jouer_carte"/>
+	<feature manual="selected" name="passer_tour"/>
+	<feature name="piocher_max_trois_cartes"/>
+	<feature automatic="selected" name="cartes_speciales"/>
+	<feature automatic="unselected" name="carte_plus_2"/>
+	<feature automatic="unselected" name="carte_inversion"/>
+	<feature automatic="unselected" name="carte_passe_son_tour"/>
+	<feature manual="selected" name="carte_joker"/>
+	<feature automatic="unselected" name="carte_plus_4"/>
+	<feature automatic="unselected" name="carte_echange_main"/>
+	<feature automatic="unselected" name="carte_0"/>
+	<feature automatic="unselected" name="carte_7"/>
+	<feature automatic="unselected" name="carte_uno"/>
+	<feature manual="selected" name="limiter_temps"/>
+	<feature automatic="selected" name="gagner_partie"/>
+	<feature automatic="unselected" name="gagnant_manche_accumule_points"/>
+	<feature automatic="unselected" name="premier_atteindre_500_points"/>
+	<feature automatic="selected" name="perdants_manche_accumulent_points"/>
+	<feature manual="selected" name="avoir_minimum_de_points"/>
+	<feature automatic="selected" name="donneur_manche"/>
+	<feature automatic="selected" name="chiffre_carte_plus_elevee"/>
+</configuration>

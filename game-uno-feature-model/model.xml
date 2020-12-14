@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendposition" value="1032,633"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="4"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="game_uno_model">
+			<or mandatory="true" name="deposer_cartes">
+				<graphics key="collapsed" value="false"/>
+				<or name="carte_classique">
+					<graphics key="collapsed" value="false"/>
+					<feature name="meme_numero"/>
+					<feature name="meme_couleur"/>
+				</or>
+				<feature name="carte_identique_interception"/>
+				<or name="cumul">
+					<graphics key="collapsed" value="false"/>
+					<feature name="cumul_plus_2"/>
+					<feature name="cumul_plus_4"/>
+				</or>
+				<feature name="suites"/>
+				<feature name="suite_royale"/>
+				<feature name="deposer_entre_0_et_4_cartes"/>
+				<feature name="contester_carte_plus_4"/>
+			</or>
+			<or abstract="true" mandatory="true" name="piocher">
+				<graphics key="collapsed" value="false"/>
+				<alt name="piocher_une_carte">
+					<graphics key="collapsed" value="false"/>
+					<feature name="jouer_carte"/>
+					<feature name="passer_tour"/>
+				</alt>
+				<feature name="piocher_max_trois_cartes"/>
+			</or>
+			<alt abstract="true" mandatory="true" name="cartes_speciales">
+				<graphics key="collapsed" value="false"/>
+				<feature name="carte_plus_2"/>
+				<feature name="carte_inversion"/>
+				<feature name="carte_passe_son_tour"/>
+				<feature name="carte_joker"/>
+				<feature name="carte_plus_4"/>
+				<feature name="carte_echange_main"/>
+				<feature name="carte_0"/>
+				<feature name="carte_7"/>
+				<feature name="carte_uno"/>
+			</alt>
+			<feature name="limiter_temps"/>
+			<alt abstract="true" mandatory="true" name="gagner_partie">
+				<graphics key="collapsed" value="false"/>
+				<and name="gagnant_manche_accumule_points">
+					<graphics key="collapsed" value="false"/>
+					<feature mandatory="true" name="premier_atteindre_500_points">
+						<graphics key="collapsed" value="false"/>
+					</feature>
+				</and>
+				<and name="perdants_manche_accumulent_points">
+					<graphics key="collapsed" value="false"/>
+					<feature mandatory="true" name="avoir_minimum_de_points">
+						<graphics key="collapsed" value="false"/>
+					</feature>
+				</and>
+			</alt>
+			<and mandatory="true" name="donneur_manche">
+				<feature mandatory="true" name="chiffre_carte_plus_elevee"/>
+			</and>
+		</and>
+	</struct>
+</featureModel>

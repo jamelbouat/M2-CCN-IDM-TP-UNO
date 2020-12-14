@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="game_uno_model"/>
+	<feature automatic="selected" name="deposer_cartes"/>
+	<feature name="carte_classique"/>
+	<feature name="meme_numero"/>
+	<feature name="meme_couleur"/>
+	<feature name="carte_identique_interception"/>
+	<feature name="cumul"/>
+	<feature name="cumul_plus_2"/>
+	<feature name="cumul_plus_4"/>
+	<feature name="suites"/>
+	<feature name="suite_royale"/>
+	<feature name="deposer_entre_0_et_4_cartes"/>
+	<feature name="contester_carte_plus_4"/>
+	<feature automatic="selected" name="piocher"/>
+	<feature name="piocher_une_carte"/>
+	<feature name="jouer_carte"/>
+	<feature name="passer_tour"/>
+	<feature name="piocher_max_trois_cartes"/>
+	<feature automatic="selected" name="cartes_speciales"/>
+	<feature name="carte_plus_2"/>
+	<feature name="carte_inversion"/>
+	<feature name="carte_passe_son_tour"/>
+	<feature name="carte_joker"/>
+	<feature name="carte_plus_4"/>
+	<feature name="carte_echange_main"/>
+	<feature name="carte_0"/>
+	<feature name="carte_7"/>
+	<feature name="carte_uno"/>
+	<feature name="limiter_temps"/>
+	<feature automatic="selected" name="gagner_partie"/>
+	<feature name="gagnant_manche_accumule_points"/>
+	<feature name="premier_atteindre_500_points"/>
+	<feature name="perdants_manche_accumulent_points"/>
+	<feature name="avoir_minimum_de_points"/>
+	<feature automatic="selected" name="donneur_manche"/>
+	<feature automatic="selected" name="chiffre_carte_plus_elevee"/>
+</configuration>

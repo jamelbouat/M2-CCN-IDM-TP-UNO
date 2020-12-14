@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/chiffre_carte_plus_elevee.jar"/>
+	<classpathentry kind="lib" path="lib/deposer_cartes.jar"/>
+	<classpathentry kind="lib" path="lib/donneur_manche.jar"/>
+	<classpathentry kind="lib" path="lib/limiter_temps.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,64 @@
+grammar org.xtext.gameuno.UnoDsl with org.eclipse.xtext.common.Terminals
+
+generate unoDsl "http://www.xtext.org/gameuno/UnoDsl"
+
+UnoDsl:
+	'regles:' '[' regles += RegleJeu (',' regles += RegleJeu)* ']'	
+;
+
+RegleJeu:
+	'{'
+	('nom_regle:' name = STRING ',')
+	('description:' description = STRING ',')
+	('exigences:' '['(exigence += Exigence ',')* (exigence += Exigence) ']')
+	'}'
+;
+
+Exigence:
+	(expr1 = Expr1) (linker1 = Linker1)? (linker2 = Linker2) (carte += Carte (',' carte += Carte)*)? (linker3 = Linker3)? (expr2 = Expr2)?
+;
+
+Expr1:
+	('le joueur' | 'joueurs' | 'le jeu')
+;
+
+Linker1:
+	('dit interception et ' | 'suivant')
+;
+
+Linker2:
+	('pose' | 'pioche' | 'limite' | 'gagne' | 'tourne' | 'impose' | 'echange' | 'passe')
+;
+
+Linker3:
+	('si meme couleur' | 'si meme numero')
+;
+
+Expr2:
+	('sur la pile-talon' | 'de la pioche-pile' | 'le temps de la manche' | 'dans le sens inverse' |
+      'les mains' | 'si points accumules 500' | 'si carte piochée +elevee' | 'ses cartes avec autre joueur' |
+      'son tour'
+	)
+;
+	
+Carte:
+	(CarteClassique | CarteActive | {Carte} CarteNoire)
+;
+
+CarteClassique:
+	('carte-numero-') (numeroCarte = INT) ('-couleur-' couleur = CouleurCarte)
+;
+
+CarteActive:
+	('carte-passer-tour' | 'carte-plus-2' | 'carte-inversion') '-couleur-' couleur = CouleurCarte
+;
+
+CarteNoire:
+	('carte-plus-4' | 'carte-joker' | 'carte-uno')
+;
+
+CouleurCarte:
+	('rouge' | 'jaune' | 'bleu' | 'vert')
+	;
+	
+	
